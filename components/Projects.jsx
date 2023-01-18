@@ -3,6 +3,7 @@ import ProjectItem from './ProjectItem';
 import project1 from '../public/assets/projects/project1.png';
 import Motivation from '../public/assets/projects/Motivation.png';
 import Netflix from '../public/assets/projects/Netflix.png';
+import Hackathon from '../public/assets/projects/Hackathon.png';
 import Calculator from '../public/assets/projects/calculator.png';
 import Portfolio from '../public/assets/projects/portfolio.png';
 
@@ -18,19 +19,19 @@ const Projects = () => {
                     <ProjectItem
                         title='Youtube Clone'
                         image={project1}
-                        Url='/youtube-clone'
+                        Url='/youtubeClone'
                         techStack = 'React, Material UI, Youtube API'
                     />
                     <ProjectItem
                         title='Motivation App'
                         image={Motivation}
-                        Url='/motivation-app'
+                        Url='/motivationApp'
                         techStack= 'React, CSS, RapidAPI'
                     />
                     <ProjectItem
                         title='Netflix Clone'
                         image={Netflix}
-                        Url='/youtube-clone'
+                        Url='/netflixClone'
                         techStack= 'React, CSS , RapidAPI, Firebase'
                     />
                     <ProjectItem
@@ -43,6 +44,12 @@ const Projects = () => {
                         title='React Portfolio'
                         image={Portfolio}
                         Url='/react-portfolio'
+                        techStack= 'React, CSS'
+                    />
+                    <ProjectItem
+                        title='Vcet Hackathon 2022'
+                        image={Hackathon}
+                        Url='/vcetHackathon'
                         techStack= 'React, CSS'
                     />
 
