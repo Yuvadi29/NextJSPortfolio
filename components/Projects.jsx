@@ -43,7 +43,7 @@ const Projects = () => {
                     <ProjectItem
                         title='React Portfolio'
                         image={Portfolio}
-                        Url='/react-portfolio'
+                        Url='/reactPortfolio'
                         techStack= 'React, CSS'
                     />
                     <ProjectItem
