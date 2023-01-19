@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import React from 'react'
+import React from 'react';
+import Link from 'next/link';
 
 const About = () => {
     return (
@@ -18,9 +19,13 @@ const About = () => {
                         I have Also Participated in various competitive coding Contests and Hackathons. Along with application developement i am aslo interested in content creation and Youtube. My other hobbies include travelling ,vlogging and podcasting.
                     </p>
 
-                    <p className='py-2 text-gray-600 underline cursor-pointer'>Checkout my projects</p>
+                    <p className='py-6 text-gray-600 underline cursor-pointer text-xl'>
+                        <Link href='/#projects'>
+                            Checkout my projects
+                        </Link>
+                    </p>
                 </div>
-                <div className='w-full h-auto m-auto flex items-center justify-center p-4 hover:scale'>
+                <div className='w-full h-auto m-auto flex items-center justify-center p-6 hover:scale'>
                     <Image src="/../public/assets/adi.png" alt="/" width='250' height='10' />
                 </div>
             </div>

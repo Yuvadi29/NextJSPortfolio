@@ -3,12 +3,32 @@ import Link from 'next/link';
 import contact from '../public/assets/contact.png';
 import { AiFillInstagram, AiFillGithub } from 'react-icons/ai';
 import { FaLinkedinIn, FaYoutube } from 'react-icons/fa';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
-import React from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 
 const Contact = () => {
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        emailjs.sendForm(process.env.SERVICE_ID, process.env.TEMPLATE_ID, form.current, process.env.PUBLIC_KEY)
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
+
+    const handleSubmit = () => {
+        alert('Message Sent Successfully');
+        window.location.reload();
+    }
+
     return (
+
         <div id='contact' className='w-full lg:h-screen'>
             <div className='max-w-[1240px] m-auto px-2 py-16 w-full '>
                 <p className='text-xl tracking-widest uppercase text-[#5651e5]'>
@@ -53,8 +73,6 @@ const Contact = () => {
                                         <AiFillGithub className='fill-[#181717]' size={25} />
 
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>
@@ -63,7 +81,7 @@ const Contact = () => {
                     {/* right */}
                     <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
                         <div className='p-4'>
-                            <form>
+                            <form ref={form} onSubmit={sendEmail}>
                                 <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
                                     <div className='flex flex-col'>
                                         <label className='uppercase text-sm py-2'>Name</label>
@@ -108,7 +126,7 @@ const Contact = () => {
                                         name='message'
                                     ></textarea>
                                 </div>
-                                <button className='w-full p-4 text-gray-100 mt-4'>
+                                <button type='submit' onClick={handleSubmit} className='w-full p-4 text-gray-100 mt-4'>
                                     Send Message
                                 </button>
                             </form>

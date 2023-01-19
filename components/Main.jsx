@@ -1,8 +1,22 @@
 import React from 'react';
 import { AiOutlineClose, AiOutlineMenu, AiFillInstagram, AiFillGithub } from 'react-icons/ai';
 import { FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import { Cursor, useTypewriter } from 'react-simple-typewriter';
+
 
 const Main = () => {
+  
+
+  const [text, count] = useTypewriter({
+    words: [
+      "Mern Stack Developer",
+      "Content Creator 📷",
+      "<LovesToMakeVideos/>",
+    ],
+    loop: true,
+    delaySpeed: 2000,
+  });
+
   return (
     <div id='home' className='w-full h-screen text-center'>
       <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
@@ -12,7 +26,8 @@ const Main = () => {
             <span className='text-[#5651e5]'>Aditya</span>
           </h1>
           <h1 className='py04 text-gray-700'>
-            MERN STACK DEVELOPER
+            {text}
+            <Cursor cursorColor="#f7ABBB" />
           </h1>
           <p className='py-4 text-gray-600 max-w-[70%] m-auto'>
             I'm a Mern Stack Developer along with a Content Creation on Youtube as well. I am a self taught developer. Currenly, I'm focused on building Mern Stack Applications while learning the Backend Technologies.
