@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import Link from 'next/link';
+import adi from '../public/assets/adi.png'
 
 const About = () => {
     return (
@@ -26,7 +27,7 @@ const About = () => {
                     </p>
                 </div>
                 <div className='w-full h-auto m-auto flex items-center justify-center p-6 hover:scale'>
-                    <Image src="/../public/assets/adi.png" alt="/" width='250' height='10' />
+                    <Image src={adi} alt="/" width='250' height='10' />
                 </div>
             </div>
         </div>
