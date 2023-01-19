@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMenu, AiFillInstagram, AiFillGithub } from 'react-icons/ai';
 import { FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import { useRouter } from 'next/router';
+import logo from '../public/assets/logo.png'
 
 const Navbar = () => {
 
@@ -51,7 +52,7 @@ const Navbar = () => {
     <div style={{ backgroundColor: `${navBg}` }} className={shadow ? 'fixed w-full h-20 shadow-xl z-[100]' : 'fixed w-full h-20 z-[100]'}>
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <Link href='/'>
-          <Image src="/../public/assets/logo.png" alt="/" width='125' height='50' />
+          <Image src={logo} alt="/" width='125' height='50' />
         </Link>
         <div>
           <ul style={{ color: `${linkColor}` }} className='hidden md:flex '>
