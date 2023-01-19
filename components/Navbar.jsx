@@ -108,20 +108,28 @@ const Navbar = () => {
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>Contact</li>
               </Link>
             </ul>
-            <div className='pt-40'>
+            <div className='pt-4'>
               <p className='uppercase tracking-widest text-[#5651e5]'>Connect With Me</p>
               <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-500 back'>
-                  <FaLinkedinIn className='fill-[#0A66C2]' size={20} />
+                  <a href='https://www.linkedin.com/in/aditya-trivedi-b99586211/' target='_blank'>
+                    <FaLinkedinIn className='fill-[#0A66C2]' size={20} />
+                  </a>
                 </div>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-500'>
-                  <AiFillInstagram className='fill-[#E1306C]' size={20} />
+                  <a href="https://www.instagram.com/_coding_adda" target='_blank'>
+                    <AiFillInstagram className='fill-[#E1306C]' size={20} />
+                  </a>
                 </div>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-500'>
-                  <FaYoutube className='fill-[#FF0000]' size={20} />
+                  <a href="https://www.youtube.com/@coding_adda" target='_blank'>
+                    <FaYoutube className='fill-[#FF0000]' size={20} />
+                  </a>
                 </div>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-500'>
-                  <AiFillGithub className='fill-[#181717]' size={20} />
+                  <a href="https://github.com/Yuvadi29" target='_blank'>
+                    <AiFillGithub className='fill-[#181717]' size={20} />
+                  </a>
                 </div>
               </div>
             </div>

@@ -26,3 +26,28 @@ html{
         @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#1f2937] to-[#4b5563] text-white;
     }
 }
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary) var(--primary);
+  }
+  
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: var(--primary);
+    border-radius: 5px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--secondary);
+    border-radius: 14px;
+    border: 3px solid var(--primary);
+  }
+  :root {
+    --primary: rebeccapurple;
+    --secondary: cornflowerblue;
+  }

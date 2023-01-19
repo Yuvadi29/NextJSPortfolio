@@ -58,20 +58,27 @@ const Contact = () => {
                                 <p className='uppercase pt-8'>Connect With Me</p>
                                 <div className='flex items-center justify-between py-4'>
                                     <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                        <FaLinkedinIn className='fill-[#0A66C2]' size={25} />
+                                        <a href='https://www.linkedin.com/in/aditya-trivedi-b99586211/' target='_blank'>
+                                            <FaLinkedinIn className='fill-[#0A66C2]' size={20} />
+                                        </a>
                                     </div>
                                     <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                        <AiFillInstagram className='fill-[#E1306C]' size={25} />
+                                        <a href="https://www.instagram.com/_coding_adda" target='_blank'>
+                                            <AiFillInstagram className='fill-[#E1306C]' size={20} />
+                                        </a>
 
                                     </div>
                                     <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                        <FaYoutube className='fill-[#FF0000]' size={25} />
+                                        <a href="https://www.youtube.com/@coding_adda" target='_blank'>
+                                            <FaYoutube className='fill-[#FF0000]' size={20} />
+                                        </a>
 
                                     </div>
 
                                     <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                        <AiFillGithub className='fill-[#181717]' size={25} />
-
+                                        <a href="https://github.com/Yuvadi29" target='_blank'>
+                                            <AiFillGithub className='fill-[#181717]' size={20} />
+                                        </a>
                                     </div>
                                 </div>
                             </div>
