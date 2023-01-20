@@ -5,7 +5,7 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter';
 
 
 const Main = () => {
-  
+
 
   const [text, count] = useTypewriter({
     words: [
@@ -34,16 +34,24 @@ const Main = () => {
           </p>
           <div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
             <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-115 ease-in duration-500 back'>
-              <FaLinkedinIn className='fill-[#0A66C2]' size={25} />
+              <a href='https://www.linkedin.com/in/aditya-trivedi-b99586211/' target='_blank'>
+                <FaLinkedinIn className='fill-[#0A66C2]' size={25} />
+              </a>
             </div>
             <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-115 ease-in duration-500'>
-              <AiFillInstagram className='fill-[#E1306C]' size={25} />
+              <a href="https://www.instagram.com/_coding_adda" target='_blank'>
+                <AiFillInstagram className='fill-[#E1306C]' size={25} />
+              </a>
             </div>
             <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-115 ease-in duration-500'>
-              <FaYoutube className='fill-[#FF0000]' size={25} />
+              <a href="https://www.youtube.com/@coding_adda" target='_blank'>
+                <FaYoutube className='fill-[#FF0000]' size={25} />
+              </a>
             </div>
             <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-115 ease-in duration-500'>
-              <AiFillGithub className='fill-[#181717]' size={25} />
+              <a href="https://github.com/Yuvadi29" target='_blank'>
+                <AiFillGithub className='fill-[#181717]' size={25} />
+              </a>
             </div>
           </div>
         </div>
