@@ -14,7 +14,7 @@ const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        emailjs.sendForm(process.env.SERVICE_ID, process.env.TEMPLATE_ID, form.current, process.env.PUBLIC_KEY)
+        emailjs.sendForm('service_w18xgyp', 'template_tgqerpc', form.current, 'hpVPfQVpaWKVjMk2D')
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
@@ -133,7 +133,7 @@ const Contact = () => {
                                         name='message'
                                     ></textarea>
                                 </div>
-                                <button type='submit' onClick={handleSubmit} className='w-full p-4 text-gray-100 mt-4'>
+                                <button type='submit' onClick={handleSubmit} className='w-full p-4 text-gray-500 mt-4 bg-black/10'>
                                     Send Message
                                 </button>
                             </form>
