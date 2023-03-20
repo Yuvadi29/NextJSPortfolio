@@ -27,7 +27,7 @@ const About = () => {
                     </p>
                 </div>
                 <div className='w-full h-auto m-auto flex items-center justify-center p-6 hover:scale'>
-                    <Image src={adi} alt="/" width='250' height='10' />
+                    <Image src={adi} alt="/" width='300' height='20' />
                 </div>
             </div>
         </div>
