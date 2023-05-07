@@ -11,6 +11,7 @@ const Main = () => {
     words: [
       "Mern Stack Developer",
       "Content Creator 📷",
+      "FreeLancer",
       "<LovesToMakeVideos/>",
     ],
     loop: true,

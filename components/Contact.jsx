@@ -5,7 +5,7 @@ import { AiFillInstagram, AiFillGithub } from 'react-icons/ai';
 import { FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 
 const Contact = () => {
@@ -14,12 +14,22 @@ const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_w18xgyp', 'template_tgqerpc', form.current, 'hpVPfQVpaWKVjMk2D')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
+
+        emailjs
+            .sendForm(
+                "service_w18xgyp",
+                "template_tgqerpc",
+                form.current,
+                "hpVPfQVpaWKVjMk2D"
+            )
+            .then(
+                (result) => {
+                    alert(result.text);
+                },
+                (error) => {
+                    alert(error.text);
+                }
+            )
     };
 
     const handleSubmit = () => {
@@ -133,9 +143,9 @@ const Contact = () => {
                                         name='message'
                                     ></textarea>
                                 </div>
-                                <button type='submit' onClick={handleSubmit} className='w-full p-4 text-gray-500 mt-4 bg-black/10'>
-                                    Send Message
-                                </button>
+                                <input type='submit' value='Send Message' className='w-full p-4 text-gray-500 mt-4 bg-black/10' onClick={handleSubmit}/>
+                                    {/* Send Message */}
+                                {/* </input> */}
                             </form>
                         </div>
                     </div>
