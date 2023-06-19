@@ -5,15 +5,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    // colors: {
-    //   'linkedin': '#0A66C2',
-    //   'youtube': '#FF0000',
-    //   'github': '#181717',
-    //   'instagram': '#E1306C',
-    // }
-    extend:{}
+    extend: {
+      fontFamily: {
+        'openSans': ['Open Sans'],
+        'mainContent': ['Montserrat'],
+      }
+    }
   },
   plugins: [
-    // require('@tailwindcss/forms')
+    // require('flowbite/plugin')
   ]
 }

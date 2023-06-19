@@ -4,7 +4,9 @@ import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMenu, AiFillInstagram, AiFillGithub } from 'react-icons/ai';
 import { FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import { useRouter } from 'next/router';
-import logo from '../public/assets/logo.png'
+import logo from '../public/assets/logo.png';
+
+
 
 const Navbar = () => {
 
@@ -13,6 +15,8 @@ const Navbar = () => {
   const [navBg, setNavBg] = useState('#ecf0f3');
   const [linkColor, setLinkColor] = useState('#1f2937');
   const router = useRouter();
+
+  const [darkMode, setDarkMode] = useState(false);
 
 
   useEffect(() => {
@@ -55,21 +59,21 @@ const Navbar = () => {
           <Image src={logo} alt="/" width='125' height='50' />
         </Link>
         <div>
-          <ul style={{ color: `${linkColor}` }} className='hidden md:flex '>
+          <ul style={{ color: `${linkColor}` }} className="hidden md:flex font-openSans font-bold">
             <Link href='/'>
-              <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
+              <li className='ml-10 uppercase text-base text-[18px]'>Home</li>
             </Link>
             <Link href='/#about'>
-              <li className='ml-10 text-sm uppercase hover:border-b'>About</li>
+              <li className='ml-10 uppercase text-base text-[18px]'>About</li>
             </Link>
             <Link href='/#skills'>
-              <li className='ml-10 text-sm uppercase hover:border-b'>Skills</li>
+              <li className='ml-10 uppercase text-base text-[18px]'>Skills</li>
             </Link>
             <Link href='/#projects'>
-              <li className='ml-10 text-sm uppercase hover:border-b'>Projects</li>
+              <li className='ml-10 uppercase text-base text-[18px]'>Projects</li>
             </Link>
             <Link href='/#contact'>
-              <li className='ml-10 text-sm uppercase hover:border-b'>Contact</li>
+              <li className='ml-10 uppercase text-base text-[18px]'>Contact</li>
             </Link>
           </ul>
           <div onClick={handleNav} className='md:hidden'>

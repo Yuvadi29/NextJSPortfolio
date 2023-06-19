@@ -58,14 +58,14 @@ const Contact = () => {
                             </div>
                             <div>
                                 <h2 className='py-2'>Aditya Trivedi</h2>
-                                <p>Mern Stack | Content Creator</p>
-                                <p className='py-4'>
+                                <p className='text-[18px]'>Mern Stack | Content Creator</p>
+                                <p className='py-4 text-[18px]'>
                                     I am available for freelance or full-time positions. Contact
                                     me and let&apos;s talk.
                                 </p>
                             </div>
                             <div>
-                                <p className='uppercase pt-8'>Connect With Me</p>
+                                <p className='uppercase pt-4'>Connect With Me</p>
                                 <div className='flex items-center justify-between py-4'>
                                     <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                                         <a href='https://www.linkedin.com/in/aditya-trivedi-b99586211/' target='_blank'>
@@ -101,7 +101,7 @@ const Contact = () => {
                             <form ref={form} onSubmit={sendEmail}>
                                 <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
                                     <div className='flex flex-col'>
-                                        <label className='uppercase text-sm py-2'>Name</label>
+                                        <label className='uppercase text-md font-bold py-2'>Name</label>
                                         <input
                                             className='border-2 rounded-lg p-3 flex border-gray-300'
                                             type='text'
@@ -109,7 +109,7 @@ const Contact = () => {
                                         />
                                     </div>
                                     <div className='flex flex-col'>
-                                        <label className='uppercase text-sm py-2'>
+                                        <label className='uppercase text-md font-bold py-2'>
                                             Phone Number
                                         </label>
                                         <input
@@ -120,7 +120,7 @@ const Contact = () => {
                                     </div>
                                 </div>
                                 <div className='flex flex-col py-2'>
-                                    <label className='uppercase text-sm py-2'>Email</label>
+                                    <label className='uppercase text-md font-bold py-2'>Email</label>
                                     <input
                                         className='border-2 rounded-lg p-3 flex border-gray-300'
                                         type='email'
@@ -128,7 +128,7 @@ const Contact = () => {
                                     />
                                 </div>
                                 <div className='flex flex-col py-2'>
-                                    <label className='uppercase text-sm py-2'>Subject</label>
+                                    <label className='uppercase text-md font-bold py-2'>Subject</label>
                                     <input
                                         className='border-2 rounded-lg p-3 flex border-gray-300'
                                         type='text'
@@ -136,14 +136,14 @@ const Contact = () => {
                                     />
                                 </div>
                                 <div className='flex flex-col py-2'>
-                                    <label className='uppercase text-sm py-2'>Message</label>
+                                    <label className='uppercase text-md font-bold py-2'>Message</label>
                                     <textarea
                                         className='border-2 rounded-lg p-3 border-gray-300'
                                         rows='10'
                                         name='message'
                                     ></textarea>
                                 </div>
-                                <input type='submit' value='Send Message' className='w-full p-4 text-gray-500 mt-4 bg-black/10' onClick={handleSubmit}/>
+                                <input type='submit' value='Send Message' className='w-full p-4 text-md font-bold text-gray-500 mt-4 bg-black/10' onClick={handleSubmit}/>
                                     {/* Send Message */}
                                 {/* </input> */}
                             </form>

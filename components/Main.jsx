@@ -22,15 +22,15 @@ const Main = () => {
     <div id='home' className='w-full h-screen text-center'>
       <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
         <div>
-          <p className='uppercase text-sm tracking-widest text-gray-600'>Hustle Karo Bhasad Nai </p>
-          <h1 className='py-4 text-gray-700'>Myself,
-            <span className='text-[#5651e5]'>Aditya</span>
+          <p className="uppercase text-sm tracking-widest text-gray-600 text-[16px] font-bold ">Hustle Karo Bhasad Nai </p>
+          <h1 className='py-4 text-[#0f172a]'>Myself,
+            <span className='bg-gradient-to-r from-[#0f172a] to-[#4ca5ff] text-transparent bg-clip-text'>Aditya</span>
           </h1>
-          <h1 className='py04 text-gray-700'>
+          <h1 className='py-04 font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-[#0f172a] to-[#4ca5ff]'>
             {text}
             <Cursor cursorColor="#f7ABBB" />
           </h1>
-          <p className='py-4 text-gray-600 max-w-[70%] m-auto'>
+          <p className='py-4 text-gray-600 max-w-[70%] m-auto text-[18px]'>
             I'm a Mern Stack Developer along with a Content Creation on Youtube as well. I am a self taught developer. Currenly, I'm focused on building Mern Stack Applications while learning the Backend Technologies.
           </p>
           <div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
