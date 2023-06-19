@@ -5,6 +5,7 @@ import { AiOutlineClose, AiOutlineMenu, AiFillInstagram, AiFillGithub } from 're
 import { FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import { useRouter } from 'next/router';
 import logo from '../public/assets/logo.png';
+import { MdOutlineLightMode, MdOutlineDarkMode } from 'react-icons/md';
 
 
 
@@ -15,8 +16,6 @@ const Navbar = () => {
   const [navBg, setNavBg] = useState('#ecf0f3');
   const [linkColor, setLinkColor] = useState('#1f2937');
   const router = useRouter();
-
-  const [darkMode, setDarkMode] = useState(false);
 
 
   useEffect(() => {
@@ -75,6 +74,7 @@ const Navbar = () => {
             <Link href='/#contact'>
               <li className='ml-10 uppercase text-base text-[18px]'>Contact</li>
             </Link>
+
           </ul>
           <div onClick={handleNav} className='md:hidden'>
             <AiOutlineMenu size={25} />
