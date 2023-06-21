@@ -4,6 +4,7 @@ import About from '@/components/About';
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
+import Landing from './Landing';
 
 export default function Home() {
  
@@ -32,11 +33,7 @@ export default function Home() {
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
-      <Main />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      <Landing />
     </>
   )
 }
