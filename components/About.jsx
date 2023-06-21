@@ -46,7 +46,7 @@ const About = () => {
     );
 
     return (
-        <div id="about" className="w-full h-screen p-2 flex items-center justify-center">
+        <div id="about" className="w-full h-screen p-2 flex items-center justify-center no-cursor">
             <div className="max-w-[1240px] mx-auto flex flex-col md:flex-row md:gap-8">
                 <motion.div
                     className="w-full md:w-[50%] flex flex-col"

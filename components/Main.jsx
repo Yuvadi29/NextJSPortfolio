@@ -2,7 +2,7 @@ import React from 'react';
 import { AiOutlineClose, AiOutlineMenu, AiFillInstagram, AiFillGithub } from 'react-icons/ai';
 import { FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
-
+import { motion } from 'framer-motion';
 
 const Main = () => {
 
@@ -20,9 +20,13 @@ const Main = () => {
   });
 
   return (
-    <div id='home' className='w-full h-screen text-center'>
+    <div id='home' className='w-full h-screen text-center no-cursor'>
       <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
           <p className="uppercase text-sm tracking-widest text-gray-600 text-[16px] font-bold ">Hustle Karo Bhasad Nai </p>
           <h1 className='py-4 text-[#ffffff]'>Myself,
             <span className='bg-gradient-to-r from-[#ffffff] to-[#4ca5ff] text-transparent bg-clip-text'>Aditya</span>
@@ -56,7 +60,7 @@ const Main = () => {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   )

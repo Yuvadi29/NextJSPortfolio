@@ -14,7 +14,7 @@ const TextAnimation = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="flex items-center justify-center h-screen bg-[#0f172a]"
+            className="flex items-center justify-center h-screen bg-[#0f172a] no-cursor"
             onClick={handleClick}
         >
             <motion.h1
@@ -23,7 +23,7 @@ const TextAnimation = () => {
                 transition={{ duration: 1, delay: 0.5 }}
                 className="text-white text-4xl md:text-6xl font-bold cursor-pointer text-center px-4"
             >
-                <div className="content">
+                <div className="content no-cursor">
                     <h1 className="title">
                         Hey There!
                         <br />
@@ -36,7 +36,7 @@ const TextAnimation = () => {
                         </div>
                     </h1>
                 </div>
-                <p className='text-sm font-openSans mt-5'>Click above to get Started</p>
+                <p className='text-sm font-openSans mt-5 no-cursor'>Click above to get Started</p>
             </motion.h1>
         </motion.div>
     );
