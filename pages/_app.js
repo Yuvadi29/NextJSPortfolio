@@ -1,4 +1,4 @@
-import Navbar from '@/components/Navbar';
+// import Navbar from '@/components/Navbar';
 import '@/styles/globals.css';
 import { ThemeProvider } from "next-themes";
 import { useEffect } from 'react';
@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }) {
     <>
       <ThemeProvider enableSystem={true} attribute='class'>
         <div className="circle-cursor"></div>
-        <Navbar />
+        {/* <Navbar /> */}
         <Component {...pageProps} />
       </ThemeProvider>
     </>
