@@ -5,9 +5,6 @@ import { AiOutlineClose, AiOutlineMenu, AiFillInstagram, AiFillGithub } from 're
 import { FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import { useRouter } from 'next/router';
 import logo from '../public/assets/logo.png';
-import { MdOutlineLightMode, MdOutlineDarkMode } from 'react-icons/md';
-
-
 
 const Navbar = () => {
 

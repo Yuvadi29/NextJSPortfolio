@@ -6,7 +6,6 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter';
 
 const Main = () => {
 
-
   const [text, count] = useTypewriter({
     words: [
       "Mern Stack Developer",
