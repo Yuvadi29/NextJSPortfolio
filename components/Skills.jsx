@@ -1,156 +1,59 @@
 import Image from 'next/image';
-import React from 'react';
-import html from '../public/assets/skills/html.png';
-import css from '../public/assets/skills/css.png';
-import javascript from '../public/assets/skills/javascript.png';
-import react from '../public/assets/skills/react.png';
-import nodejs from '../public/assets/skills/nodejs.png';
-import mongodb from '../public/assets/skills/mongodb.png';
-import git from '../public/assets/skills/git.png';
-import github from '../public/assets/skills/github.png';
-import nextjs from '../public/assets/skills/nextjs.png';
+import { motion, useTransform, useViewportScroll } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import skill from './Skill.json';
 
 const Skills = () => {
-    return (
-        <div id='skills' className='w-full lg:h-screen p-2 no-cursor'>
-            <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
-                <p className='text-xl tracking-widest uppercase text-[#5651e5]'>My Skills</p>
-                <h2 className='py-4'>What I Can Do</h2>
-                <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
+  const [refImage, inViewImage] = useInView({
+    threshold: 0.2,
+  });
 
-                    {/* Skills */}
-                    <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-                        <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-                            <div className='m-auto'>
-                                <Image
-                                    src={html}
-                                    alt="/"
-                                    width={71}
-                                    height={71} />
-                            </div>
-                            <div className='flex flex-col items-center justify-center'>
-                                <h3>HTML</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-                        <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-                            <div className='m-auto'>
-                                <Image
-                                    src={css}
-                                    alt="/"
-                                    width={71}
-                                    height={71} />
-                            </div>
-                            <div className='flex flex-col items-center justify-center'>
-                                <h3>CSS</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-                        <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-                            <div className='m-auto'>
-                                <Image
-                                    src={javascript}
-                                    alt="/"
-                                    width={71}
-                                    height={71} />
-                            </div>
-                            <div className='flex flex-col items-center justify-center'>
-                                <h3>JavaScript</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-                        <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-                            <div className='m-auto'>
-                                <Image
-                                    src={react}
-                                    alt="/"
-                                    width={71}
-                                    height={71} />
-                            </div>
-                            <div className='flex flex-col items-center justify-center'>
-                                <h3>React</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-                        <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-                            <div className='m-auto'>
-                                <Image
-                                    src={nodejs}
-                                    alt="/"
-                                    width={71}
-                                    height={71} />
-                            </div>
-                            <div className='flex flex-col items-center justify-center'>
-                                <h3>Nodejs</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-                        <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-                            <div className='m-auto'>
-                                <Image
-                                    src={mongodb}
-                                    alt="/"
-                                    width={71}
-                                    height={71} />
-                            </div>
-                            <div className='flex flex-col items-center justify-center'>
-                                <h3>MongoDB</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-                        <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-                            <div className='m-auto'>
-                                <Image
-                                    src={git}
-                                    alt="/"
-                                    width={71}
-                                    height={71} />
-                            </div>
-                            <div className='flex flex-col items-center justify-center'>
-                                <h3>Git</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-                        <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-                            <div className='m-auto'>
-                                <Image
-                                    src={github}
-                                    alt="/"
-                                    width={71}
-                                    height={71} />
-                            </div>
-                            <div className='flex flex-col items-center justify-center'>
-                                <h3>Github</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-                        <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-                            <div className='m-auto'>
-                                <Image
-                                    src={nextjs}
-                                    alt="/"
-                                    width={71}
-                                    height={71} />
-                            </div>
-                            <div className='flex flex-col items-center justify-center'>
-                                <h3>NextJs</h3>
-                            </div>
-                        </div>
-                    </div>
+  const imageVariants = {
+    hidden: {
+      opacity: 0,
+      translateX: 100,
+    },
+    visible: {
+      opacity: 1,
+      translateX: 0,
+    },
+  };
 
+  const { scrollYProgress } = useViewportScroll();
+  const fadeTransform = useTransform(
+    scrollYProgress,
+    [0, 2], // Adjust the values based on when you want the fade effect to start and end
+    [200, 0] // Adjust the values based on the desired translation distance
+  );
 
+  return (
+    <div id='skills' className='w-full h-full lg:h-screen p-2 no-cursor'>
+      <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
+        {/* Skills */}
+        <section className="w-full">
+          <div className="font-bold text-white font-firaCode text-3xl lg:text-4xl text-center mb-4">
+            ⚙ My Tech Stack
+          </div>
+          <div className="m-auto grid grid-cols-8 gap-2 md:grid-cols-5 sm:grid-cols-3">
+            {skill.Skills.map((skills, index) => (
+              <motion.div
+                className="w-full md:w-[50%] flex"
+                initial="hidden"
+                animate={inViewImage ? "visible" : "hidden"}
+                variants={imageVariants}
+                ref={refImage}
+                key={index}
+              >
+                <div className="flex justify-center">
+                  <Image src={skills.path} alt="myskills" width={800} height={800} className="w-full object-cover blur-sm hover:blur-none grayscale hover:grayscale-0 ml-[105px]" />
                 </div>
-            </div>
-        </div>
-    )
+              </motion.div>
+            ))}
+          </div>
+        </section>
+      </div>
+    </div>
+  );
 }
 
 export default Skills;

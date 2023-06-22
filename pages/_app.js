@@ -22,7 +22,6 @@ export default function App({ Component, pageProps }) {
     <>
       <ThemeProvider enableSystem={true} attribute='class'>
         <div className="circle-cursor"></div>
-        {/* <Navbar /> */}
         <Component {...pageProps} />
       </ThemeProvider>
     </>

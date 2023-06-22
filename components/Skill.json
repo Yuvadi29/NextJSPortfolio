@@ -1,0 +1,92 @@
+{
+    "Skills": [
+        {
+            "id": 1,
+            "path": "/assets/skills/AfterEffects.svg"
+        },
+        {
+            "id": 2,
+            "path": "/assets/skills/Bootstrap.svg"
+        },
+        {
+            "id": 3,
+            "path": "/assets/skills/C.svg"
+        },
+        {
+            "id": 4,
+            "path": "/assets/skills/CSS.svg"
+        },
+        {
+            "id": 5,
+            "path": "/assets/skills/Django.svg"
+        },
+        {
+            "id": 6,
+            "path": "/assets/skills/ExpressJS-Light.svg"
+        },
+        {
+            "id": 7,
+            "path": "/assets/skills/Flask-Light.svg"
+        },
+        {
+            "id": 8,
+            "path": "/assets/skills/Git.svg"
+        },
+        {
+            "id": 9,
+            "path": "/assets/skills/Github-Light.svg"
+        },
+        {
+            "id": 10,
+            "path": "/assets/skills/JavaScript.svg"
+        },
+        {
+            "id": 11,
+            "path": "/assets/skills/Linux-Light.svg"
+        },
+        {
+            "id": 12,
+            "path": "/assets/skills/MaterialUI-Light.svg"
+        },
+        {
+            "id": 13,
+            "path": "/assets/skills/MongoDB.svg"
+        },
+        {
+            "id": 14,
+            "path": "/assets/skills/NextJS-Light.svg"
+        },
+        {
+            "id": 15,
+            "path": "/assets/skills/NodeJS-Light.svg"
+        },
+        {
+            "id": 16,
+            "path": "/assets/skills/Postman.svg"
+        },
+        {
+            "id": 17,
+            "path": "/assets/skills/Premiere.svg"
+        },
+        {
+            "id": 18,
+            "path": "/assets/skills/Python-Light.svg"
+        },
+        {
+            "id": 19,
+            "path": "/assets/skills/React-Dark.svg"
+        },
+        {
+            "id": 20,
+            "path": "/assets/skills/Redux.svg"
+        },
+        {
+            "id": 21,
+            "path": "/assets/skills/TailwindCSS-Dark.svg"
+        },
+        {
+            "id": 22,
+            "path": "/assets/skills/Vercel-Dark.svg"
+        }
+    ]
+}
