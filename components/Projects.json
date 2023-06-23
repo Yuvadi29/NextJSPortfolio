@@ -1,0 +1,60 @@
+{
+    "Work": [
+        {
+            "id": "1",
+            "name": "Youtube-Clone",
+            "slug": "A youtube clone",
+            "link": "www.github.com",
+            "description": "Long Description",
+            "image": "path"
+        },
+        {
+            "id": "2",
+            "name": "Quotes-App",
+            "slug": "A quotes app",
+            "link": "www.github.com",
+            "description": "Long Description",
+            "image": "path"
+        },
+        {
+            "id": "3",
+            "name": "Netflix-Clone",
+            "slug": "A netflix clone",
+            "link": "www.github.com",
+            "description": "Long Description",
+            "image": "path"
+        },
+        {
+            "id": "4",
+            "name": "Calculator",
+            "slug": "A calculator",
+            "link": "www.github.com",
+            "description": "Long Description",
+            "image": "path"
+        },
+        {
+            "id": "5",
+            "name": "React-Portoflio",
+            "slug": "A react portfolio",
+            "link": "www.github.com",
+            "description": "Long Description",
+            "image": "path"
+        },
+        {
+            "id": "6",
+            "name": "Hackathon-Website",
+            "slug": "A hackathon website",
+            "link": "www.github.com",
+            "description": "Long Description",
+            "image": "path"
+        },
+        {
+            "id": "7",
+            "name": "Hashnode-Channel",
+            "slug": "my hashnode channel",
+            "link": "hashnode.com/CodingAdda",
+            "description": "Long Description",
+            "image": "path"
+        }
+    ]
+}

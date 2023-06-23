@@ -1,14 +1,10 @@
-import React from 'react'
-import ProjectItem from './ProjectItem';
-import project1 from '../public/assets/projects/project1.png';
-import Motivation from '../public/assets/projects/Motivation.png';
-import Netflix from '../public/assets/projects/Netflix.png';
-import Hackathon from '../public/assets/projects/Hackathon.png';
-import Calculator from '../public/assets/projects/calculator.png';
-import Portfolio from '../public/assets/projects/portfolio.png';
-
+import React, { useState } from 'react'
+import WorkData from './Projects.json';
+import Link from 'next/link';
 
 const Projects = () => {
+    const [selectedProject, setSelectedProject] = useState(null);
+
     return (
         <div id='projects' className='w-full no-cursor'>
             <div className='max-w-[1240px] mx-auto px-2 py-16'>
@@ -16,42 +12,15 @@ const Projects = () => {
                 <h2 className='py-4'>What I have Built</h2>
                 <div className='grid md:grid-cols-2 gap-8'>
 
-                    <ProjectItem
-                        title='Youtube Clone'
-                        image={project1}
-                        Url='/youtubeClone'
-                        techStack = 'React, Material UI, Youtube API'
-                    />
-                    <ProjectItem
-                        title='Motivation App'
-                        image={Motivation}
-                        Url='/motivationApp'
-                        techStack= 'React, CSS, RapidAPI'
-                    />
-                    <ProjectItem
-                        title='Netflix Clone'
-                        image={Netflix}
-                        Url='/netflixClone'
-                        techStack= 'React, CSS , RapidAPI, Firebase'
-                    />
-                    <ProjectItem
-                        title='Calculator'
-                        image={Calculator}
-                        Url='/calculator'
-                        techStack= 'HTML, CSS, JavaScript'
-                    />
-                    <ProjectItem
-                        title='React Portfolio'
-                        image={Portfolio}
-                        Url='/reactPortfolio'
-                        techStack= 'React, CSS'
-                    />
-                    <ProjectItem
-                        title='Vcet Hackathon 2022'
-                        image={Hackathon}
-                        Url='/vcetHackathon'
-                        techStack= 'React, CSS'
-                    />
+                    {WorkData.Work.map((item) => (
+                        <div key={item.id} onClick={() => setSelectedProject(item)}>
+                            <div>{item.name}</div>
+                            <div>{item.slug}</div>
+                            <Link href={`/projects/${item.name}`} rel='noopener noreferrer'>
+                                View on Github
+                            </Link>
+                        </div>
+                    ))}
 
                 </div>
             </div>
