@@ -4,9 +4,10 @@
             "id": "1",
             "name": "Youtube-Clone",
             "slug": "A youtube clone",
-            "link": "www.github.com",
+            "link": "https://github.com/Yuvadi29/Youtube-Clone",
             "description": "Long Description",
-            "image": "path"
+            "image": "path",
+            "live": "https://adityaytclone.netlify.app/"
         },
         {
             "id": "2",
