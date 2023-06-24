@@ -5,13 +5,12 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
 
 const Main = () => {
-
   const [text, count] = useTypewriter({
     words: [
       "Mern Stack Developer",
       "Content Creator",
       "FreeLancer",
-      "<LovesToMakeVideos/>",
+      "<Loves To Make Videos/>",
     ],
     loop: true,
     delaySpeed: 500,
@@ -27,18 +26,24 @@ const Main = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <p className="uppercase text-sm tracking-widest text-gray-600 text-[16px] font-bold ">Hustle Karo Bhasad Nai </p>
-          <h1 className='py-4 text-[#ffffff]'>Myself,
-            <span className='bg-gradient-to-r from-[#ffffff] to-[#4ca5ff] text-transparent bg-clip-text'>Aditya</span>
+          <p className="uppercase text-sm tracking-widest text-gray-600 text-[16px] font-bold ">
+            Hustle Karo Bhasad Nai
+          </p>
+          <h1 className='py-4 text-[#ffffff]'>
+            Myself,
+            <span className='bg-gradient-to-r from-[#ffffff] to-[#4ca5ff] text-transparent bg-clip-text'>
+              Aditya
+            </span>
           </h1>
           <h1 className='py-04 font-extrabold text-transparent text-7xl bg-clip-text bg-gradient-to-r from-[#4ca5ff] to-[#b274f7]'>
             {text}
             <Cursor cursorColor="#4ca5ff" />
           </h1>
           <p className='py-4 text-white max-w-[70%] m-auto text-[18px]'>
-            I'm a Mern Stack Developer along with a Content Creation on Youtube as well. I am a self taught developer. Currenly, I'm focused on building Mern Stack Applications while learning the Backend Technologies.
+            I'm a Mern Stack Developer along with a Content Creation on Youtube as well. I am a self taught developer.
+            Currently, I'm focused on building Mern Stack Applications while learning the Backend Technologies.
           </p>
-          <div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
+          <div className='flex flex-wrap justify-center items-center max-w-[330px] m-auto py-4'>
             <div className='rounded-full p-6 cursor-pointer hover:scale-115 ease-in duration-500 back'>
               <a href='https://www.linkedin.com/in/aditya-trivedi-b99586211/' target='_blank'>
                 <FaLinkedinIn className='fill-[#0A66C2]' size={40} />
@@ -63,7 +68,7 @@ const Main = () => {
         </motion.div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Main;
