@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import WorkData from './Projects.json';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Projects = () => {
-    const [selectedProject, setSelectedProject] = useState(null);
-
     return (
         <div id='projects' className='w-full no-cursor'>
             <div className='max-w-[1240px] mx-auto px-2 py-16'>
@@ -15,23 +14,26 @@ const Projects = () => {
                             <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">Cause I can Make Something 😅</p>
                         </div>
                         <div className="flex flex-wrap -m-4">
-                            {
-                                WorkData.Work.map((item) => (
-                                    <div key={item.id} className="p-4 xl:w-1/4 md:w-1/2 w-full">
-                                        <div className="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
-                                            <div className="text-sm tracking-widest title-font mb-1 font-medium">PROJECT #{item.id}</div>
-                                            <div className='text-5xl text-white pb-4 mb-4 border-b border-gray-200 leading-none'>{item.name}</div>
-                                            <div className='text-xs text-gray-500 mt-3'>{item.slug}</div>
-                                            <Link href={`/projects/${item.name}`} rel='noopener noreferrer' className='no-cursor'>
-                                                <div type="button" class="text-white bg-[#3e5382] hover:bg-[#2d447a] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
-                                                    View Project
-                                                    <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                                                </div>
-                                            </Link>
-                                        </div>
+                            <section className="dark:bg-gray-800 dark:text-gray-100 rounded-lg">
+                                <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
+                                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                                        {WorkData.Work.map((item) => (
+                                            <div key={item.id} className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900 rounded-xl">
+                                                <Link href={`/projects/${item.name}`} rel="noopener noreferrer" className="no-cursor">
+                                                    <img role="presentation" className="w-full rounded h-auto dark:bg-gray-500" src={item.image} />
+                                                    <div className="p-6 space-y-2">
+                                                        <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">{item.name}</h3>
+                                                        <span className="text-xs dark:text-gray-400">Project #{item.id}</span>
+                                                        <p>{item.slug}</p>
+                                                    </div>
+                                                </Link>
+                                            </div>
+                                        ))}
                                     </div>
-                                ))
-                            }
+                                </div>
+                            </section>
+
+
                         </div>
                     </div>
                 </section>
