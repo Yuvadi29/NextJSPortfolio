@@ -7,7 +7,7 @@
             "link": "https://github.com/Yuvadi29/Youtube-Clone",
             "description": "This is the React-created YouTube clone website. The RapidAPI Youtube V3 API was used in this instance. It has features like viewing different genres, using the search bar to look up any of the YouTube channels, playing any video you like, viewing the number of subscribers, likes, and views on a certain video, and receiving suggested videos.",
             "video": "https://res.cloudinary.com/dcxyc525d/video/upload/v1687582073/Yt_Clone_zluavu.mp4",
-            "live": "https://adityaytclone.netlify.app/",
+            "live": "https://aditya-youtube-clone.vercel.app/",
             "image": "https://res.cloudinary.com/dcxyc525d/image/upload/v1687789198/ytclone_oxoj7p.png"
         },
         {
