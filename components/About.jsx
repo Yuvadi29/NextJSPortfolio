@@ -86,25 +86,25 @@ const About = () => {
                         </div>
                         {/* My Description */}
                         <div className="font-FiraCode ">
-                                <div className="text-base">
-                                    <div className="text-blue-500">const name = 'Aditya Trivedi';</div>
-                                    <div className="text-green-500">const education = 'IT Engineering';</div>
-                                    <div className="text-yellow-500">const interests = ['Web Development', 'Flutter Development', 'Content Creation'];</div>
-                                    <div className="text-purple-500">const technologies = ['ReactJs', 'NextsJs', 'Express', 'NodeJs', 'Django', 'BootStrap', 'Github', 'MongoDb', 'Java'];</div>
-                                    <div className="text-indigo-500">const codingContests = ['Hackathons'];</div>
-                                    <div className="text-pink-500">const hobbies = ['Travelling', 'Vlogging', 'Podcasting', 'Teaching'];</div>
-                                    <div className="text-blue-500"><br />export default AboutMe();</div>
-                                </div>
+                            <div className="text-base">
+                                <div className="text-blue-500">const name = 'Aditya Trivedi';</div>
+                                <div className="text-green-500">const education = 'IT Engineering';</div>
+                                <div className="text-yellow-500">const interests = ['Web Development', 'Flutter Development', 'Content Creation'];</div>
+                                <div className="text-purple-500">const technologies = ['ReactJs', 'NextsJs', 'Express', 'NodeJs', 'Django', 'BootStrap', 'Github', 'MongoDb', 'Java'];</div>
+                                <div className="text-indigo-500">const codingContests = ['Hackathons'];</div>
+                                <div className="text-pink-500">const hobbies = ['Travelling', 'Vlogging', 'Podcasting', 'Teaching'];</div>
+                                <div className="text-blue-500"><br />export default AboutMe();</div>
+                            </div>
 
-                                {/* Small Paragraph */}
-                                <p className="mt-4 text-gray-300 font-bold text-base ">
-                                    Always Hungry for Knowledge. My passion for creativity and technology has allowed me to be active in both of these areas, and I am always eager to take on new challenges that allow me to showcase my skills.These passions have given me a unique perspective on the world and have taught me the importance of adaptability, creativity, and perseverance. Thank you for taking the time to visit my profile, and I look forward to connecting with you!
-                                </p>
+                            {/* Small Paragraph */}
+                            <p className="mt-4 text-gray-300 font-bold text-base ">
+                                Always Hungry for Knowledge. My passion for creativity and technology has allowed me to be active in both of these areas, and I am always eager to take on new challenges that allow me to showcase my skills.These passions have given me a unique perspective on the world and have taught me the importance of adaptability, creativity, and perseverance. Thank you for taking the time to visit my profile, and I look forward to connecting with you!
+                            </p>
                         </div>
                     </div>
                 </motion.div>
                 <motion.div
-                    className="w-full md:w-[50%] flex items-center justify-center p-6 ml-8"
+                    className="w-full md:w-[50%] flex items-center justify-center p-6 ml-8 sm:mr-5"
                     initial="hidden"
                     animate={inViewImage ? "visible" : "hidden"}
                     variants={imageVariants}
