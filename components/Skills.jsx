@@ -28,13 +28,13 @@ const Skills = () => {
 
   return (
     <div id='skills' className='w-full h-full lg:h-screen p-2 no-cursor'>
-      <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
+      <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full mt-56 md:mt-0'>
         {/* Skills */}
         <section className="w-full">
           <div className="font-bold text-white font-firaCode text-3xl lg:text-4xl text-center mb-4">
             ⚙ My Tech Stack
           </div>
-          <div className="m-auto grid grid-cols-8 gap-2 md:grid-cols-5 sm:grid-cols-3">
+          <div className="m-auto grid lg:grid-cols-8 gap-2 md:grid-cols-5 sm:grid-cols-1">
             {skill.Skills.map((skills, index) => (
               <motion.div
                 className="w-full md:w-[50%] flex"
