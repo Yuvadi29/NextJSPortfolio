@@ -59,6 +59,16 @@
             "video": "https://res.cloudinary.com/dcxyc525d/video/upload/v1687786248/Venture_Mate_lc27df.mp4",
             "live": "https://github.com/Yuvadi29/StartUpProject",
             "image": "https://res.cloudinary.com/dcxyc525d/image/upload/v1687790839/startup_ryuq0o.png"
+        },
+        {
+            "id": "7",
+            "name": "Amazon Clone",
+            "slug": "Full Stack MERN Application with NextJS, Tailwind CSS, and Stripe Payment Gateway.",
+            "link": "https://github.com/Yuvadi29/AmazonClone",
+            "description": " This full-stack MERN application built using Next.js and Tailwind CSS is designed to provide a seamless and efficient online shopping experience. It includes various functionalities and features for both customers and administrators, ensuring a complete e-commerce solution. The integration of the Stripe Payment Gateway further enhances the application by enabling secure and convenient payment processing during checkout.",
+            "video": "https://res.cloudinary.com/dcxyc525d/video/upload/v1690439939/Amazon_Clone_cv9wsr.mp4",
+            "live": "https://github.com/Yuvadi29/AmazonClone",
+            "image": "https://res.cloudinary.com/dcxyc525d/image/upload/v1690440124/amazonClone_in8pu6.png"
         }
     ]
 }
