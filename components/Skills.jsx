@@ -1,9 +1,26 @@
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, useTransform, useViewportScroll } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import skill from './Skill.json';
 
 const Skills = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize(); // Set initial state on mount
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const [refImage, inViewImage] = useInView({
     threshold: 0.2,
   });
@@ -26,8 +43,6 @@ const Skills = () => {
     [200, 0] // Adjust the values based on the desired translation distance
   );
 
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
   return (
     <div id='skills' className='w-full min-h-screen p-2 no-cursor'>
       <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full mt-56 md:mt-0'>
@@ -39,7 +54,7 @@ const Skills = () => {
           <div className="m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
             {skill.Skills.map((skills, index) => (
               <div
-                className={`w-full flex justify-center ${!isMobile && 'motion'}`}
+                className={`w-full flex justify-center ${isMobile ? 'my-2' : 'motion'}`}
                 key={index}
                 ref={refImage}
               >
