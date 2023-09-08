@@ -70,11 +70,6 @@ const Skills = () => {
                     />
                   </div>
                 ) : (
-                  <motion.div
-                    initial="hidden"
-                    animate={inViewImage ? 'visible' : 'hidden'}
-                    variants={imageVariants}
-                  >
                     <div className="w-full max-w-[200px]">
                       <Image
                         src={skills.path}
@@ -85,7 +80,6 @@ const Skills = () => {
                         className="blur-sm hover:blur-none grayscale hover:grayscale-0"
                       />
                     </div>
-                  </motion.div>
                 )}
               </div>
             ))}
